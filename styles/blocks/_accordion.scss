@@ -1,56 +1,78 @@
 /*----------------------------------accordion--------------------------------*/
 .accordion {
+    color: var(--color-black);
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        font-weight: 600;
+        font-size: 1.9rem;
+        line-height: 100%;
+        @include table {
+            font-size: 1.5rem;
+        }
+        @include mobile {
+            font-size: 0.9rem;
+        }
+    }
     &__block {
         margin-bottom: 1.5rem;
+        background-color: var(--color-white);
+        border-radius: 5px;
     }
     &__summary {
+        border-radius: 5px;
         list-style: none;
         appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
         cursor: pointer; 
-        padding: 0.5rem;
+        padding: 2.2rem 2.2rem 2.2rem 3rem;
         position: relative;
         width: 100%;
-        background-color: #E0F0FA;
+        background-color: var(--color-white);
         z-index: 3;
-        &::after,
-        &::before {
-            position: absolute;
-            content: '';
-            width: 10px;
-            height: 2px;
-            top: 40%;
-            right: 0;
-            background-color: var(--color-black);
-            transition: transform 0.2s ease-out;
+        svg {
+            transition: all 0.3s;
+            flex: none;
+            @include table {
+                width: 2rem;
+            }
+            @include mobile {
+                width: 1.5rem;
+            }
         }
-        &::after {
-            transform: rotate(-45deg);
-            right: 5px;
+        @include table {
+            padding: 1.5rem;
         }
-        &::before {
-            transform: rotate(45deg);
-            right: 12px;
+        @include mobile {
+            padding: 0.5rem;
         }
     }
-    &__details[open] &__summary::after {
-        transform: rotate(45deg);
-    }
-    &__details[open] &__summary::before {
-        transform: rotate(-45deg);
+    &__details[open] &__summary svg {
+        transform: rotate(180deg);
+        transition: all 0.3s;
     }
     &__content {
         display: grid;
         grid-template-rows: 0fr;
         transition-duration: 0.5s;
-        padding: 10px;
+        padding: 0rem 2.2rem 2.2rem 3rem;
         margin-bottom: 0.5rem;
-        background-color: #E0F0FA;
         opacity: 0;
         margin-top: -2rem;
+        font-size: 1.3rem;
+        line-height: 100%;
         &_body {
             overflow: hidden;
+        }
+        @include table {
+            padding: 0rem 1.5rem 1.5rem 1.5rem;
+            font-size: 0.9rem;
+        }
+        @include mobile {
+            padding: 1rem 0.5rem 0.5rem 0.5rem;
         }
     }
     &__details[open] + &__content {

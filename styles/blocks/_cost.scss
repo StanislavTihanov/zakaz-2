@@ -1,0 +1,146 @@
+/*----------------------------------cost--------------------------------*/
+.cost {
+    margin-bottom: -8rem;
+    @include table {
+        margin-bottom: 0rem;
+    }
+    &__items {
+        display: flex;
+        align-items: stretch;
+        gap: 1.5rem 6rem;
+        @include table {
+            gap: 1.5rem 1.8rem;
+            margin-bottom: 2rem;
+        }
+        @include mobile {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        @include table {
+            flex-wrap: wrap;
+        }
+    }
+    &__block {
+        &:first-child {
+            flex-basis: 90rem;
+            margin-right: -15rem;
+            margin-top: 5rem;
+            @include table {
+                margin-top: 0rem;
+                margin-right: 0rem;
+            }
+            @include mobile {
+                display: none;
+            }
+        }
+        &_img {
+            margin-left: -19rem;
+            @include table {
+                margin-left: -6rem;
+            }
+        }
+
+        &_title {
+            font-weight: 600;
+            font-size: 2.5rem;
+            line-height: 112%;
+            margin-bottom: 2rem;
+            @include mobile {
+                font-size: 1.3rem;
+            }
+        }
+        &_text {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 112%;
+            @include mobile {
+                font-size: 1.3rem;
+                font-weight: 500;
+            }
+        }
+        &:last-child {
+            flex-basis: 63.5rem;
+            @include table {
+                flex-basis: 30rem;
+            }
+        }
+    }
+}
+.item {
+    border-radius: 5px;
+    padding: 2.2rem 2.5rem;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    flex-basis: 25.6rem;
+    @include table {
+        padding: 2.2rem 1.3rem 0.9rem 1.3rem;
+    }
+    @include mobile {
+        padding: 1rem 1.3rem 0.9rem 1.3rem;
+    }
+    &__title {
+        position: relative;
+        padding-bottom: 1rem;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 160%;
+        letter-spacing: 0.01em;
+        margin-bottom: 0.5rem;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 65px;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--color-red);
+        }
+    }
+    &__text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 156%;
+        letter-spacing: 0.01em;
+        margin-bottom: 1rem;
+    }
+    &__box {
+        &:not(:last-child) {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-bottom: 1.5rem;
+        }
+        :first-child {
+            font-weight: 700;
+        }
+        :last-child {
+            font-weight: 400;
+        }
+    }
+    &__list {
+        padding-top: 1.2rem;
+        li {
+            position: relative;
+            margin-bottom: 0.2rem;
+            padding-left: 1.2rem;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 0.5rem;
+                background-color: var(--color-primary);
+            }
+        }
+    }
+}
+/*----------------------------------cost--------------------------------*/

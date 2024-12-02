@@ -1,23 +1,16 @@
 /*----------------------------------form--------------------------------*/
 .form {
-    max-width: 708px;
-    border-radius: 15px;
-    box-shadow: var(--shadow);
-    background: var(--color-white);
-    padding: 2rem 3rem;
-    @include mobile {
-        padding: 1.5rem 0.6rem;
-    }
     &__input {
-        border-radius: 10px;
-        background: rgb(236, 236, 236);
+        border: 1px solid #e6e6e6;
+        border-radius: 5px;
         width: 100%;
         margin-bottom: 24px;
         padding: 1rem 1.5rem;
-        color: var(--color-black);
+        color: var(--color-primary);
+        background: #f9f9f9;
     }
     &__input::placeholder {
-        color: var(--color-black);
+        color: var(--color-primary);
         @include fluid-text(14, 16);
     }
     &__input_textarea {
@@ -27,47 +20,13 @@
     &__button {
         display: block;
         margin-bottom: 1.5rem;
-        margin-left: auto;
-        border-radius: 10px;
-        background: var(--color-black);
-        color: var(--color-red);
-        padding: 0.6rem 3.8rem;
-        cursor: pointer;
-    }
-    &__checkbox {
-        position: absolute;
-        opacity: 0;
-        width: 0;
-        height: 0;
-        z-index: -1;
-    }
-    &__checkbox_custom {
-        position: relative;
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        background: var(--color-white);
-        border: 2px solid #e0e5ea;
         border-radius: 5px;
-        vertical-align: sub;
-        margin-right: 0.3rem;
-        flex: none;
-        &::before {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            transition: 0.2s ease-in;
-            content: '';
-            display: inline-block;
-            width: 15px;
-            height: 15px;
-            background-image: url(../images/check.svg);
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
+        background: var(--color-orange);
+        color: var(--color-white);
+        padding: 1rem;
+        cursor: pointer;
+        font-weight: 700;
     }
-    
 }
 .form__checkbox:checked + .form__checkbox_custom::before {
     transform: translate(-50%, -50%) scale(1);

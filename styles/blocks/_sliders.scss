@@ -1,9 +1,14 @@
 /*---------------------------------------sliders----------------------------*/
-.slider {
+.slider-wrapper {
+  position: relative;
+  padding: 0rem 1.5rem;
+  display: none;
+  @include mobile {
+    display: block;
+  }
+}
+.spheres-slider {
     overflow: hidden;
-    position: relative;
-    padding-bottom: 66px;
-    padding: 0px 18px 60px 20px;
 }
   /*---------------------------------------параметры чтобы слайды имели одинаковую высоту----------------------------*/
   .swiper-wrapper {
@@ -14,28 +19,23 @@
     height: auto;
     transition: all 0.5s ease;
 }
-  .card {
+.swiper-slide .sphere {
     height: 100%;
 }
   /*---------------------------------------параметры чтобы слайды имели одинаковую высоту----------------------------*/
   .swiper-button-next,
   .swiper-button-prev {
-    top: 45%;
+    top: 50%;
 }
   .swiper-button-next {
-    right: 10px;
+    right: -10px;
 }
   .swiper-button-prev {
-    left: 10px;
+    left: -10px;
 }
   .swiper-button-next::after,
   .swiper-button-prev::after {
-    font-size: 20px;
-    color: var(--color-white);
-    border: 1px solid var(--color-white);
-    padding: 14px 18px;
-    border-radius: 15px;
-    background-color: var(--color-black);
+    display: none;
 }
   .swiper-pagination-bullet {
     opacity: 1;

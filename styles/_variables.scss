@@ -1,8 +1,9 @@
 :root {
     --color-black: #000000;
     --color-white: #FFFFFF;
-    --color-gray: #F3F3F3;
-    --color-blue: #2735cd;
+    --color-primary: #2D4059;
+    --color-orange: #E77C40;
+    --color-red: #E74040;
 
     --border: 1px solid var(--color-black);
     --border-radius: 10px;
@@ -12,8 +13,8 @@
 
     --font-family-base: 'Montserrat', sans-serif;
 
-    --container-width: 91.21rem;
-    --container-padding-x: 0.6rem;
+    --container-width: 72.5rem;
+    --container-padding-x: 1rem;
 
-    --section-padding-y: 3.13rem;
+    --section-padding-y: 5rem;
 }

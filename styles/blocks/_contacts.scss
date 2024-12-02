@@ -1,0 +1,34 @@
+/*----------------------------------contacts--------------------------------*/
+.contacts {
+    &__body {
+        background-color: var(--color-white);
+        color: var(--color-primary);
+        padding: 2.2rem 2.5rem 1rem 2.5rem;
+        border-radius: 5px;
+        @include table {
+            padding: 2rem 0.9rem 0.9rem 0.9rem; 
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 2.2rem;
+        line-height: 89%;
+        padding-bottom: 1.3rem;
+        margin-bottom: 1.3rem;
+        position: relative;
+        @include mobile {
+            font-size: 1.3rem;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            width: 110px;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--color-red);
+        }
+    }
+}
+
+/*----------------------------------contacts--------------------------------*/

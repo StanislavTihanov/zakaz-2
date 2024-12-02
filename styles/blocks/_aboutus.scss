@@ -1,0 +1,22 @@
+/*----------------------------------aboutus--------------------------------*/
+.aboutus {
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+    &__image {
+        @include table {
+            display: none;
+        }
+    }
+    &__info {
+        flex-basis: 37rem;
+        .text {
+            margin-bottom: 1.8rem;
+        }
+    }
+}
+
+/*----------------------------------aboutus--------------------------------*/

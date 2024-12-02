@@ -1,0 +1,28 @@
+/*----------------------------------get--------------------------------*/
+.get {
+    &__subtitle {
+        font-weight: 600;
+        font-size: 2.5rem;
+        line-height: 107%;
+        @include mobile {
+            font-size:1.3rem;
+        }
+    }
+    &__list {
+        li {
+            display: flex;
+            gap: 10px;
+            padding-left: 1rem;
+            &::before {
+                left: 0rem;
+            }
+            span {
+                font-weight: 700;
+            }
+            p {
+               font-weight: 400;
+            }
+        }
+    }
+}
+/*----------------------------------get--------------------------------*/

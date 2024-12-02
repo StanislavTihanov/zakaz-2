@@ -1,0 +1,113 @@
+/*----------------------------------spheres--------------------------------*/
+.spheres {
+    &__body {
+       display: flex;
+       justify-content: space-between;
+       align-items: stretch;
+       gap: 5rem 1.5rem;
+       flex-wrap: wrap;
+       @include table {
+          justify-content: center;
+          gap: 2rem 1.5rem;
+       }
+       @include mobile {
+        display: none;
+       }
+    }
+    &__bottom {
+        margin-top: 10rem;
+        position: relative;
+		&_title {
+            font-size: 2.5rem;
+            line-height: 112%;
+            font-weight: 600;
+            max-width: 573px;
+            margin-bottom: 1.8rem;
+            position: relative;
+            z-index: 3;
+            @include mobile {
+                font-size: 1.5rem;
+            }
+		}
+        @include table {
+            margin-bottom: 5rem;
+            margin-top: 5rem;
+        }
+        @include mobile {
+            margin-bottom: 16rem;
+        }
+	}
+	&__images {
+        margin-top: -27rem;
+        @include table {
+            margin-top: -6rem;
+            margin-left: -1.5rem;
+        }
+        @include mobile {
+            position: absolute;
+            right: -1rem;
+            top: 9rem;
+        }
+	}
+    &__bg {
+        margin-left: -4rem;
+        @include table {
+            margin-left: 0rem;
+        }
+        @include mobile {
+
+        }
+    }
+	&__screens {
+        position: absolute;
+        top: 1rem;
+        right: -12rem;
+        @include table {
+            width: 40rem;
+            right: -2rem;
+            top: 9rem;
+        }
+        @include mobile {
+            display: none;
+        }
+	}
+}
+.sphere {
+    border-radius: 5px;
+    padding: 2.2rem 2.5rem;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    flex-basis: 20rem;
+    @include mobile {
+        padding: 2rem 1rem;
+    }
+    &__title {
+        font-weight: 700;
+        line-height: 178%;
+        letter-spacing: 0.01em;
+        padding-bottom: 1.4rem;
+        position: relative;
+        margin-bottom: 1.3rem;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 4rem;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--color-red);
+        }
+    }
+    &__block {
+        line-height: 143%;
+        letter-spacing: 0.01em;
+    }
+    &__subtitle {
+        font-weight: 600;
+    }
+    &__text {
+        margin-bottom: 1.3rem;
+    }
+
+}
+/*----------------------------------spheres--------------------------------*/

@@ -14,12 +14,12 @@
             cursor: pointer;
             &__line {
                 height: 5px;
-                width: 27px;
+                width: 26px;
                 position: absolute;
                 transition: all 0.3s ease 0s;
-                background: #000;
+                background: var(--color-white);
                 transform: translate(-50%, -50%);
-                border-radius: 1px;
+                border-radius: 2px;
                 &:first-child {
                     left: 50%;
                     top: 25%;
